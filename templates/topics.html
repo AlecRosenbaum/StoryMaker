@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<h1 id="topic" class="text-center">TOPICS</h1>
+
+{{ pagination.info }}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Last Activity</th>
+      <th>Story Length</th>
+      <th>Sentences Available</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for subject in subjects %}
+      <tr class="clickable-row" data-href="/{{ subject[0] }}">
+        <td scope="row">{{ subject[1] }}</td>
+        <td>{{ subject[2] }}</td>
+        <td>{{ subject[3] }}</td>
+        <td>{{ subject[4] }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{{ pagination.links }}
+
+{% endblock %}
+
+{% block scripts %}
+<!-- custom scripts -->
+<script src="static/topics.js"></script>
+{% endblock %}
+
+
+{% block css %}
+<link rel="stylesheet" href="static/topics.css">
+{% endblock %}

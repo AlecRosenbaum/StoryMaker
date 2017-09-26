@@ -1,0 +1,28 @@
+a.deco-none {
+    color: #292b2c;
+    text-decoration:none;
+}
+
+.bottom-buffer {
+    padding-bottom: 50px;
+}
+
+.bg-blue {
+    background-color: #0275d8;
+}
+
+.bg-green {
+    background-color: #5cb85c;
+}
+
+.bg-lightblue {
+    background-color: #5bc0de;
+}
+
+.bg-orange {
+    background-color: #f0ad4e;
+}
+
+#next {
+    border-bottom: 1px dotted #000;
+}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-xs-12" style="height:50px;"></div>
+
+<h1 id="topic" class="text-center" subject_id="{{ subject.id }}">{{ subject.text }}</h1>
+
+<div id="post_ctr"></div>
+
+<div class="footer fixed-bottom">
+    <div class="container">
+        <div class="bottom-buffer pull-right">
+            <button id="shuffle" type="button" class="btn btn-info btn-lg">
+                <i class="fa fa-random" aria-hidden="true"></i>
+            </button>
+            <button id="submit" type="button" class="btn btn-info btn-lg">
+                ADD TO STORY
+            </button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- socket io -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+<!-- custom scripts -->
+<script src="static/subject.js"></script>
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="static/subject.css">
+{% endblock %}
